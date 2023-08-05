@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Budget Tracker</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="mb-4">Budget Tracker</h1>
+
+      <form id="incomeForm" class="mb-4">
+        <div class="form-group">
+          <input
+            type="text"
+            id="incomeDesc"
+            class="form-control"
+            placeholder="Income Description"
+            required
+          />
+          <input
+            type="number"
+            id="incomeAmt"
+            class="form-control"
+            placeholder="Income Amount"
+            required
+          />
+          <button type="submit" class="btn btn-success">Add Income</button>
+        </div>
+      </form>
+
+      <form id="expenseForm">
+        <div class="form-group">
+          <input
+            type="text"
+            id="expenseDesc"
+            class="form-control"
+            placeholder="Expense Description"
+            required
+          />
+          <input
+            type="number"
+            id="expenseAmt"
+            class="form-control"
+            placeholder="Expense Amount"
+            required
+          />
+          <button type="submit" class="btn btn-danger">Add Expense</button>
+        </div>
+      </form>
+
+      <h2 class="mt-4">Transactions</h2>
+      <table class="table mt-2">
+        <thead>
+          <tr>
+            <th scope="col">Description</th>
+            <th scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody id="transactionTable">
+          <!-- Transactions will be added dynamically with JavaScript -->
+        </tbody>
+      </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
